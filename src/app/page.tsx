@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import Link from "next/link";
 
 export default function Home() {
   const [contactForm, setContactForm] = useState({
@@ -69,7 +70,7 @@ export default function Home() {
     <header className="w-full bg-black text-white p-4 md:p-6 sticky top-0 z-50 shadow-lg">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center gap-3 mb-4 md:mb-0">
-          <div className="font-bold text-2xl md:text-3xl">Kanye CSI</div>
+          <div className="font-bold text-2xl md:text-3xl">KanyaCSI</div>
           <div className="text-sm md:text-base text-gray-300">Empowering through skills</div>
         </div>
         <nav>
@@ -172,9 +173,9 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2 text-[#323231]">Agricultural Skills</h3>
                 <p className="text-[#323231] mb-4 leading-relaxed">Learn sustainable farming practices, crop management, and modern agricultural techniques to boost productivity and food security.</p>
-                <button className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
+                <Link href="/agriculture" className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
                   Learn more →
-                </button>
+                </Link>
               </div>
             </div>
             
@@ -191,9 +192,9 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2 text-[#323231]">Construction</h3>
                 <p className="text-[#323231] mb-4 leading-relaxed">Comprehensive training in building techniques, safety protocols, and industry standards for the construction sector.</p>
-                <button className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
+                <Link href="/construction" className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
                   Learn more →
-                </button>
+                </Link>
               </div>
             </div>
             
@@ -210,9 +211,9 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2 text-[#323231]">Digital Literacy</h3>
                 <p className="text-[#323231] mb-4 leading-relaxed">Develop essential computer skills, from basic office applications to advanced digital tools needed in today&apos;s workplace.</p>
-                <button className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
+                <Link href="/digital-literacy" className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
                   Learn more →
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -279,12 +280,12 @@ export default function Home() {
           </div>
           
           <div className="mt-8 text-center">
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <Link 
+              href="/programs"
               className="inline-block px-8 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Browse All Programs
-            </button>
+            </Link>
           </div>
         </section>
 
@@ -322,12 +323,12 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="max-w-6xl mx-auto w-full py-16 px-4 bg-gradient-to-br from-[#f8f8f8] to-white rounded-xl">
-          <h2 className="text-3xl font-bold text-black mb-6 text-center">About Kanye CSI</h2>
+          <h2 className="text-3xl font-bold text-black mb-6 text-center">About KanyaCSI</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <p className="text-[#323231] leading-relaxed">
-                <strong>KANYA CSI</strong> is a dynamic Business Development and skills development provider, founded by Michelle McMaster in 2010. It is 100% black-owned, 100% women owned and has a <span className="text-[#cf4500] font-semibold">BBBEE Level 1 status</span> as per revised Codes of Good Practice.
+                <strong>KanyaCSI</strong> is a dynamic Business Development and skills development provider, founded by Michelle McMaster in 2010. It is 100% black-owned, 100% women owned and has a <span className="text-[#cf4500] font-semibold">BBBEE Level 1 status</span> as per revised Codes of Good Practice.
               </p>
               
               <p className="text-[#323231] leading-relaxed">
@@ -358,7 +359,7 @@ export default function Home() {
               
               <div className="bg-gradient-to-r from-[#cf4500] to-[#b03a00] p-4 rounded-lg text-white">
                 <p className="italic text-center font-medium">
-                  &quot;KANYA CSI believes that it has the vision, commitment and expertise to develop human potential and create a world that works better.&quot;
+                  &quot;KanyaCSI believes that it has the vision, commitment and expertise to develop human potential and create a world that works better.&quot;
                 </p>
               </div>
             </div>
@@ -382,7 +383,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="italic mb-3 text-[#323231] leading-relaxed">
-                    &quot;The agricultural training program at Kanye CSI gave me the skills and confidence to start my own small farm. Now I&apos;m employing three people from my community.&quot;
+                    &quot;The agricultural training program at KanyaCSI gave me the skills and confidence to start my own small farm. Now I&apos;m employing three people from my community.&quot;
                   </p>
                   <p className="font-bold text-[#cf4500]">- Thabo M.</p>
                   <p className="text-sm text-[#323231]">Agricultural Skills Graduate</p>
@@ -567,7 +568,7 @@ export default function Home() {
       <footer className="w-full">
         <div className="bg-[#323231] text-white py-2 px-4">
           <div className="max-w-6xl mx-auto flex justify-between items-center flex-wrap">
-            <p className="text-sm text-gray-300">© {new Date().getFullYear()} Kanye CSI - All rights reserved</p>
+            <p className="text-sm text-gray-300">© {new Date().getFullYear()} KanyaCSI - All rights reserved</p>
             <div className="flex gap-6 text-sm">
               <button className="text-gray-300 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]">
                 Privacy Policy
@@ -582,7 +583,7 @@ export default function Home() {
         <div className="bg-black text-white py-8 px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4 text-[#cf4500]">Kanye CSI</h3>
+              <h3 className="text-xl font-bold mb-4 text-[#cf4500]">KanyaCSI</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Providing quality skills training and development to empower individuals and organizations across South Africa.
               </p>
