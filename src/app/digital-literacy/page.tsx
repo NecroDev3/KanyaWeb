@@ -360,7 +360,7 @@ export default function DigitalLiteracyPage() {
             <div>
               <h3 className="text-xl font-bold mb-4 text-[#cf4500]">Start Your Digital Journey</h3>
               <p className="text-[#323231] mb-6 leading-relaxed">
-                Ready to develop essential digital skills for the modern workplace? Our comprehensive programs will prepare you for success in today's technology-driven world.
+                Ready to develop essential digital skills for the modern workplace? Our comprehensive programs will prepare you for success in today&apos;s technology-driven world.
               </p>
               
               <div className="space-y-4">
