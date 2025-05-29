@@ -416,7 +416,7 @@ export default function DigitalLiteracyPage() {
                   </div>
                 </div>
                 <textarea 
-                  placeholder="Tell us about your digital learning goals and any specific software you'd like to learn" 
+                  placeholder="Tell us about your digital learning goals and any specific software you&apos;d like to learn" 
                   rows={4}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#cf4500]"
                 ></textarea>
