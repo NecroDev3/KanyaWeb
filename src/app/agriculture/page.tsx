@@ -106,6 +106,7 @@ export default function AgriculturePage() {
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-3 text-[#323231]">Crop Production</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 49052 | Duration: 6 months</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
@@ -117,51 +118,52 @@ export default function AgriculturePage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Irrigation and water management</span>
+                    <span>Crop nutrition and fertilization</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Pest and disease control</span>
+                    <span>Pest and disease management</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
                     <span>Harvesting and post-harvest handling</span>
                   </li>
                 </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 6 months | NQF Level 2
+                <div className="bg-[#f8f8f8] p-3 rounded-lg">
+                  <p className="text-sm text-[#323231]"><strong>Career Opportunities:</strong> Farm Supervisor, Crop Production Manager, Agricultural Technician</p>
                 </div>
               </div>
             </div>
 
-            {/* Livestock Management */}
+            {/* Mixed Farming - replacing Livestock Management */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Livestock Management</h3>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Mixed Farming</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 68977 | Duration: 6 months</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Animal husbandry practices</span>
+                    <span>Integrated crop and livestock systems</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Feed formulation and nutrition</span>
+                    <span>Resource optimization and efficiency</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Animal health and veterinary care</span>
+                    <span>Diversified farming strategies</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Breeding and genetics</span>
+                    <span>Risk management in farming</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Record keeping and farm management</span>
+                    <span>Farm planning and management</span>
                   </li>
                 </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 8 months | NQF Level 3
+                <div className="bg-[#f8f8f8] p-3 rounded-lg">
+                  <p className="text-sm text-[#323231]"><strong>Career Opportunities:</strong> Mixed Farm Manager, Agricultural Consultant, Farm Operations Coordinator</p>
                 </div>
               </div>
             </div>
@@ -170,14 +172,11 @@ export default function AgriculturePage() {
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-3 text-[#323231]">Sustainable Farming</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 116222 | Duration: 6 months</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Organic farming methods</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Permaculture principles</span>
+                    <span>Organic farming principles</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
@@ -185,15 +184,19 @@ export default function AgriculturePage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Soil conservation and composting</span>
+                    <span>Soil health and conservation</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Climate-smart agriculture</span>
+                    <span>Renewable energy in agriculture</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Environmental impact assessment</span>
                   </li>
                 </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 4 months | NQF Level 2
+                <div className="bg-[#f8f8f8] p-3 rounded-lg">
+                  <p className="text-sm text-[#323231]"><strong>Career Opportunities:</strong> Sustainability Coordinator, Organic Farm Manager, Environmental Consultant</p>
                 </div>
               </div>
             </div>
@@ -202,6 +205,7 @@ export default function AgriculturePage() {
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-3 text-[#323231]">Agricultural Business</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 116291 | Duration: 6 months</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
@@ -209,87 +213,89 @@ export default function AgriculturePage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Financial management and budgeting</span>
+                    <span>Financial management</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Marketing and value chain development</span>
+                    <span>Marketing and sales strategies</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Cooperative formation and management</span>
+                    <span>Supply chain management</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Access to funding and grants</span>
+                    <span>Agricultural economics</span>
                   </li>
                 </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 3 months | NQF Level 4
+                <div className="bg-[#f8f8f8] p-3 rounded-lg">
+                  <p className="text-sm text-[#323231]"><strong>Career Opportunities:</strong> Agricultural Business Manager, Farm Financial Advisor, Agricultural Economist</p>
                 </div>
               </div>
             </div>
 
-            {/* Food Processing */}
+            {/* Animal Production - replacing Food Processing */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Food Processing</h3>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Animal Production</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 49048 | Duration: 6 months</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Food safety and hygiene</span>
+                    <span>Livestock breeding and genetics</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Preservation techniques</span>
+                    <span>Animal nutrition and feeding</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Packaging and labeling</span>
+                    <span>Animal health management</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Quality control and testing</span>
+                    <span>Production systems and housing</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Small-scale processing equipment</span>
+                    <span>Animal product marketing</span>
                   </li>
                 </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 5 months | NQF Level 3
+                <div className="bg-[#f8f8f8] p-3 rounded-lg">
+                  <p className="text-sm text-[#323231]"><strong>Career Opportunities:</strong> Livestock Production Manager, Animal Husbandry Specialist, Breeding Coordinator</p>
                 </div>
               </div>
             </div>
 
-            {/* Modern Technology */}
+            {/* Agricultural Technology */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-3 text-[#323231]">Agricultural Technology</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 116275 | Duration: 6 months</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Modern farming equipment operation</span>
+                  </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
                     <span>Precision agriculture techniques</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>GPS and mapping systems</span>
+                    <span>Irrigation system management</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Drone applications in farming</span>
+                    <span>Agricultural machinery maintenance</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Smart irrigation systems</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Farm management software</span>
+                    <span>Digital farming applications</span>
                   </li>
                 </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 6 months | NQF Level 4
+                <div className="bg-[#f8f8f8] p-3 rounded-lg">
+                  <p className="text-sm text-[#323231]"><strong>Career Opportunities:</strong> Agricultural Technician, Equipment Operator, Precision Agriculture Specialist</p>
                 </div>
               </div>
             </div>
