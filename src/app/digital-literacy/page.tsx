@@ -99,197 +99,104 @@ export default function DigitalLiteracyPage() {
 
         {/* Programs Section */}
         <section id="programs" className="max-w-6xl mx-auto w-full py-12 bg-[#f8f8f8] rounded-xl">
-          <h2 className="text-3xl font-bold text-black mb-8 px-4 text-center">Digital Literacy Training Programs</h2>
+          <h2 className="text-3xl font-bold text-black mb-8 px-4 text-center">Information Technology Training Programs</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-            {/* Basic Computer Skills */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+            {/* Information Technology: End User Computing */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Basic Computer Skills</h3>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Information Technology: End User Computing</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 61591 | Duration: 6 months | Level 3</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Computer fundamentals and hardware</span>
+                    <span>Microsoft Office Suite mastery</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Operating system navigation (Windows/Mac)</span>
+                    <span>Computer hardware and software fundamentals</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>File management and organization</span>
+                    <span>Internet and email communication</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Keyboard and mouse proficiency</span>
+                    <span>File management and data organization</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Basic troubleshooting skills</span>
+                    <span>Digital workplace productivity tools</span>
                   </li>
                 </ul>
                 <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 4 weeks | NQF Level 1
+                  NQF Level 3
                 </div>
               </div>
             </div>
 
-            {/* Microsoft Office Suite */}
+            {/* Information Technology: Systems Development */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Microsoft Office Suite</h3>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Information Technology: Systems Development</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 78965 | Duration: 6 months | Level 4</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Microsoft Word (documents & formatting)</span>
+                    <span>Programming fundamentals and logic</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Microsoft Excel (spreadsheets & formulas)</span>
+                    <span>Database design and management</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Microsoft PowerPoint (presentations)</span>
+                    <span>Web development technologies</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Microsoft Outlook (email & calendar)</span>
+                    <span>Software testing and debugging</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Integration between Office applications</span>
+                    <span>System analysis and design</span>
                   </li>
                 </ul>
                 <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 8 weeks | NQF Level 2
+                  NQF Level 4
                 </div>
               </div>
             </div>
 
-            {/* Internet & Email */}
+            {/* Information Technology: Technical Support */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Internet & Email</h3>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Information Technology: Technical Support</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 78964 | Duration: 6 months | Level 4</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Web browsing and search techniques</span>
+                    <span>Hardware troubleshooting and repair</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Email setup and management</span>
+                    <span>Network installation and maintenance</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Online safety and security</span>
+                    <span>Operating system configuration</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Social media basics and etiquette</span>
+                    <span>Help desk and customer support</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Online banking and e-commerce</span>
+                    <span>Security implementation and monitoring</span>
                   </li>
                 </ul>
                 <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 6 weeks | NQF Level 2
-                </div>
-              </div>
-            </div>
-
-            {/* Digital Communication */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Digital Communication</h3>
-                <ul className="text-[#323231] mb-4 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Video conferencing (Zoom, Teams, Skype)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Instant messaging and chat platforms</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>File sharing and cloud storage</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Collaborative document editing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Professional online presence</span>
-                  </li>
-                </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 4 weeks | NQF Level 2
-                </div>
-              </div>
-            </div>
-
-            {/* Data Management */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Data Management</h3>
-                <ul className="text-[#323231] mb-4 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Database fundamentals</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Data entry and validation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Spreadsheet advanced functions</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Data analysis and reporting</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Data backup and security</span>
-                  </li>
-                </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 6 weeks | NQF Level 3
-                </div>
-              </div>
-            </div>
-
-            {/* Digital Marketing */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Digital Marketing</h3>
-                <ul className="text-[#323231] mb-4 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Social media marketing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Content creation and management</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Email marketing campaigns</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Basic website management</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Online advertising basics</span>
-                  </li>
-                </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 8 weeks | NQF Level 3
+                  NQF Level 4
                 </div>
               </div>
             </div>
@@ -300,7 +207,7 @@ export default function DigitalLiteracyPage() {
         <section className="max-w-6xl mx-auto w-full py-12">
           <h2 className="text-3xl font-bold text-black mb-8 text-center">Industry Certifications Available</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-6 bg-white rounded-lg shadow-md border-l-4 border-[#cf4500]">
               <div className="text-4xl text-[#cf4500] mb-4">🏆</div>
               <h3 className="font-bold text-lg mb-2">MICTSETA Certified</h3>
@@ -308,22 +215,22 @@ export default function DigitalLiteracyPage() {
             </div>
             
             <div className="text-center p-6 bg-white rounded-lg shadow-md border-l-4 border-[#cf4500]">
-              <div className="text-4xl text-[#cf4500] mb-4">💼</div>
-              <h3 className="font-bold text-lg mb-2">Microsoft Office Specialist</h3>
-              <p className="text-[#323231]">Industry-recognized Office Suite certification</p>
+              <div className="text-4xl text-[#cf4500] mb-4">💻</div>
+              <h3 className="font-bold text-lg mb-2">Systems Development</h3>
+              <p className="text-[#323231]">Advanced programming and development skills</p>
             </div>
             
             <div className="text-center p-6 bg-white rounded-lg shadow-md border-l-4 border-[#cf4500]">
-              <div className="text-4xl text-[#cf4500] mb-4">🌐</div>
-              <h3 className="font-bold text-lg mb-2">Digital Literacy Certificate</h3>
-              <p className="text-[#323231]">Comprehensive digital skills certification</p>
+              <div className="text-4xl text-[#cf4500] mb-4">🔧</div>
+              <h3 className="font-bold text-lg mb-2">Technical Support</h3>
+              <p className="text-[#323231]">Professional IT support and troubleshooting</p>
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
         <section className="max-w-6xl mx-auto w-full py-12 bg-[#f8f8f8] rounded-xl">
-          <h2 className="text-3xl font-bold text-black mb-8 text-center">Why Choose Our Digital Literacy Programs?</h2>
+          <h2 className="text-3xl font-bold text-black mb-8 text-center">Why Choose Our IT Programs?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
@@ -335,32 +242,32 @@ export default function DigitalLiteracyPage() {
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="text-4xl text-[#cf4500] mb-4">👨‍🏫</div>
               <h3 className="font-bold text-lg mb-2">Expert Instructors</h3>
-              <p className="text-[#323231]">Certified IT professionals with teaching experience</p>
+              <p className="text-[#323231]">Certified IT professionals with industry experience</p>
             </div>
             
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="text-4xl text-[#cf4500] mb-4">📈</div>
               <h3 className="font-bold text-lg mb-2">Career Advancement</h3>
-              <p className="text-[#323231]">Essential skills for modern workplace success</p>
+              <p className="text-[#323231]">High-demand IT skills for career growth</p>
             </div>
             
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="text-4xl text-[#cf4500] mb-4">🎯</div>
-              <h3 className="font-bold text-lg mb-2">Flexible Learning</h3>
-              <p className="text-[#323231]">Part-time and full-time options available</p>
+              <h3 className="font-bold text-lg mb-2">Industry Recognition</h3>
+              <p className="text-[#323231]">SAQA registered qualifications</p>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
         <section id="contact" className="max-w-6xl mx-auto w-full py-12">
-          <h2 className="text-3xl font-bold text-black mb-8 text-center">Apply for Digital Literacy Training</h2>
+          <h2 className="text-3xl font-bold text-black mb-8 text-center">Apply for IT Training</h2>
           
           <div className="grid md:grid-cols-2 gap-8 px-4">
             <div>
-              <h3 className="text-xl font-bold mb-4 text-[#cf4500]">Start Your Digital Journey</h3>
+              <h3 className="text-xl font-bold mb-4 text-[#cf4500]">Start Your IT Career</h3>
               <p className="text-[#323231] mb-6 leading-relaxed">
-                Ready to develop essential digital skills for the modern workplace? Our comprehensive programs will prepare you for success in today&apos;s technology-driven world.
+                Ready to develop professional IT skills for the modern workplace? Our comprehensive programs will prepare you for success in the technology industry.
               </p>
               
               <div className="space-y-4">
@@ -391,15 +298,12 @@ export default function DigitalLiteracyPage() {
                 />
                 <select className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#cf4500]">
                   <option value="">Select Program</option>
-                  <option value="basic-computer">Basic Computer Skills</option>
-                  <option value="office-suite">Microsoft Office Suite</option>
-                  <option value="internet-email">Internet & Email</option>
-                  <option value="digital-communication">Digital Communication</option>
-                  <option value="data-management">Data Management</option>
-                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="end-user-computing">Information Technology: End User Computing</option>
+                  <option value="systems-development">Information Technology: Systems Development</option>
+                  <option value="technical-support">Information Technology: Technical Support</option>
                 </select>
                 <div className="space-y-2">
-                  <label className="text-sm text-[#323231] font-medium">Current Computer Experience Level:</label>
+                  <label className="text-sm text-[#323231] font-medium">Current IT Experience Level:</label>
                   <div className="flex gap-4">
                     <label className="flex items-center gap-2">
                       <input type="radio" name="experience" value="beginner" className="text-[#cf4500]" />
@@ -416,7 +320,7 @@ export default function DigitalLiteracyPage() {
                   </div>
                 </div>
                 <textarea 
-                  placeholder="Tell us about your digital learning goals and any specific software you&apos;d like to learn" 
+                  placeholder="Tell us about your IT career goals and any specific technologies you'd like to learn" 
                   rows={4}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#cf4500]"
                 ></textarea>

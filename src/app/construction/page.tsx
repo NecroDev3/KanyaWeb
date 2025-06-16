@@ -98,142 +98,15 @@ export default function ConstructionPage() {
         </section>
 
         {/* Programs Section */}
-        <section id="programs" className="max-w-6xl mx-auto w-full py-12 bg-[#f8f8f8] rounded-xl">
-          <h2 className="text-3xl font-bold text-black mb-8 px-4 text-center">Construction Training Programs</h2>
+        <section className="max-w-6xl mx-auto w-full py-12">
+          <h2 className="text-3xl font-bold text-black mb-8 text-center">Our Construction Programs</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-            {/* Building Construction */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Plaster */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Building Construction</h3>
-                <ul className="text-[#323231] mb-4 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Foundation and concrete work</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Bricklaying and masonry</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Roofing and structural work</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Building regulations and codes</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Project planning and management</span>
-                  </li>
-                </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 12 months | NQF Level 3
-                </div>
-              </div>
-            </div>
-
-            {/* Plumbing */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Plumbing</h3>
-                <ul className="text-[#323231] mb-4 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Pipe installation and repair</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Water supply systems</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Drainage and sewerage systems</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Bathroom and kitchen installations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Emergency repairs and maintenance</span>
-                  </li>
-                </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 8 months | NQF Level 2
-                </div>
-              </div>
-            </div>
-
-            {/* Electrical Installation */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Electrical Installation</h3>
-                <ul className="text-[#323231] mb-4 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Electrical wiring and circuits</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Safety protocols and regulations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Lighting and power systems</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Motor control and automation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Troubleshooting and maintenance</span>
-                  </li>
-                </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 10 months | NQF Level 3
-                </div>
-              </div>
-            </div>
-
-            {/* Carpentry & Joinery */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Carpentry & Joinery</h3>
-                <ul className="text-[#323231] mb-4 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Wood working techniques</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Furniture making and repair</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Door and window installation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Cabinet making and fitting</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Tool usage and maintenance</span>
-                  </li>
-                </ul>
-                <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 9 months | NQF Level 2
-                </div>
-              </div>
-            </div>
-
-            {/* Painting & Decorating */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Painting & Decorating</h3>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Plaster</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 261657 | Duration: 6 months</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
@@ -241,7 +114,40 @@ export default function ConstructionPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Paint application methods</span>
+                    <span>Mixing and applying plaster</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Interior and exterior plastering</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Repair and maintenance techniques</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Quality control and finishing</span>
+                  </li>
+                </ul>
+                <div className="text-sm text-[#cf4500] font-medium">
+                  NQF Level 3
+                </div>
+              </div>
+            </div>
+
+            {/* Painter - Decoration */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
+              <div className="p-6">
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Painter - Decoration</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 261666 | Duration: 6 months</p>
+                <ul className="text-[#323231] mb-4 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Surface preparation for painting</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Paint application techniques</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
@@ -249,47 +155,81 @@ export default function ConstructionPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Wallpaper hanging and removal</span>
+                    <span>Decorative finishes and effects</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Decorative finishes and effects</span>
+                    <span>Equipment maintenance and safety</span>
                   </li>
                 </ul>
                 <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 6 months | NQF Level 2
+                  NQF Level 3
                 </div>
               </div>
             </div>
 
-            {/* Construction Safety */}
+            {/* Bricklayer */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-[#323231]">Construction Safety</h3>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Bricklayer</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 261659 | Duration: 6 months</p>
                 <ul className="text-[#323231] mb-4 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Health and safety regulations</span>
+                    <span>Brick and block laying techniques</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Risk assessment and management</span>
+                    <span>Foundation and wall construction</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Personal protective equipment</span>
+                    <span>Mortar mixing and application</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Emergency procedures</span>
+                    <span>Building alignment and leveling</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cf4500] font-bold">✓</span>
-                    <span>Site safety management</span>
+                    <span>Construction safety practices</span>
                   </li>
                 </ul>
                 <div className="text-sm text-[#cf4500] font-medium">
-                  Duration: 3 months | NQF Level 2
+                  NQF Level 3
+                </div>
+              </div>
+            </div>
+
+            {/* Tiling and Glazing */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
+              <div className="p-6">
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Tiling and Glazing</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">SAQA ID: 261665 | Duration: 6 months</p>
+                <ul className="text-[#323231] mb-4 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Surface preparation for tiling</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Tile cutting and installation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Grouting and sealing techniques</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Window and door glazing</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Quality finishing and maintenance</span>
+                  </li>
+                </ul>
+                <div className="text-sm text-[#cf4500] font-medium">
+                  NQF Level 3
                 </div>
               </div>
             </div>
@@ -366,12 +306,10 @@ export default function ConstructionPage() {
                 />
                 <select className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#cf4500]">
                   <option value="">Select Program</option>
-                  <option value="building-construction">Building Construction</option>
-                  <option value="plumbing">Plumbing</option>
-                  <option value="electrical">Electrical Installation</option>
-                  <option value="carpentry">Carpentry & Joinery</option>
-                  <option value="painting">Painting & Decorating</option>
-                  <option value="safety">Construction Safety</option>
+                  <option value="plaster">Plaster</option>
+                  <option value="painter-decoration">Painter - Decoration</option>
+                  <option value="bricklayer">Bricklayer</option>
+                  <option value="tiling-glazing">Tiling and Glazing</option>
                 </select>
                 <textarea 
                   placeholder="Tell us about your construction interests and experience" 

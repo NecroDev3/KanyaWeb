@@ -370,48 +370,136 @@ export default function Home() {
         <section className="max-w-6xl mx-auto w-full py-12 px-4">
           <h2 className="text-3xl font-bold text-black mb-8 text-center">Success Stories</h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20">
-                  <Image 
-                    src="/images/computer.png" 
-                    alt="Student portrait" 
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
+          <div className="relative">
+            <div className="overflow-x-auto pb-6 flex gap-6 custom-scrollbar">
+              {/* Esinako's Story */}
+              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;😭😭😭 I really don&apos;t know how I can begin to thank you Ma&apos;am 🙏 for being so patient with all of us, for not giving up on us, for being not just a mentor but our safe space, for always be our go to person when things are not going well in our workplaces 😭😭 I have never met anyone who did what you did for me 🤞 Thank you so much miss Michelle, I promise to make you more proud.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Esinako</p>
+                    <p className="text-sm text-[#323231]">Graduate</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="italic mb-3 text-[#323231] leading-relaxed">
-                    &quot;The agricultural training program at KanyaCSI gave me the skills and confidence to start my own small farm. Now I&apos;m employing three people from my community.&quot;
-                  </p>
-                  <p className="font-bold text-[#cf4500]">- Thabo M.</p>
-                  <p className="text-sm text-[#323231]">Agricultural Skills Graduate</p>
+              </div>
+
+              {/* Melsango's Story */}
+              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;My business has grown already and I am grateful to be part of this program because it&apos;s so helpful, I&apos;ve got new clients i handle my clients definitely and it will help for more growth in my business.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Melsango Gwaza</p>
+                    <p className="text-sm text-[#323231]">Business Owner</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Wendy's Story */}
+              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;The Learning Programme is very informative and helpful in running my business and has opened a new way of thinking. The programme will allow me to put all the processing in place, allowing my company to grow from strength to strength.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Wendy Kweyama</p>
+                    <p className="text-sm text-[#323231]">Entrepreneur</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Zukiswa's Story */}
+              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;What have you learned so far? The importance of leadership and understanding the type of entrepreneur that I am. Networking with fellow entrepreneurs.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Zukiswa Tonisi</p>
+                    <p className="text-sm text-[#323231]">Business Leader</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lulama's Story */}
+              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;The learning intervention programme is to provide skills which can form the basis for structured programmes to us as potential entrepreneurs to capitalize on opportunities to start and grow sustainable businesses that form part of the mainstream economy. Where do you see yourself upon completion of this Learning Intervention? Being a successful entrepreneur who is strong enough to face business challenges internally and externally implementing what I have learned from the programme.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Lulama Eunice Majivolo</p>
+                    <p className="text-sm text-[#323231]">Aspiring Entrepreneur</p>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20">
-                  <Image 
-                    src="/images/farm.png" 
-                    alt="Student portrait" 
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
-                <div>
-                  <p className="italic mb-3 text-[#323231] leading-relaxed">
-                    &quot;After completing the IT program, I secured a position at a software company. The practical training made all the difference in my job interviews.&quot;
-                  </p>
-                  <p className="font-bold text-[#cf4500]">- Lerato N.</p>
-                  <p className="text-sm text-[#323231]">Digital Literacy Graduate</p>
-                </div>
-              </div>
-            </div>
+            {/* Scroll Indicators */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
         </section>
+
+        <style jsx global>{`
+          .custom-scrollbar::-webkit-scrollbar {
+            height: 8px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cf4500;
+            border-radius: 4px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #b03a00;
+          }
+        `}</style>
 
         {/* Registration CTA */}
         <section className="w-full bg-gradient-to-r from-[#323231] to-black py-16 relative overflow-hidden rounded-xl">
