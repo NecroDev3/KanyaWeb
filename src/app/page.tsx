@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default function Home() {
   const [contactForm, setContactForm] = useState({
@@ -65,81 +68,44 @@ export default function Home() {
 
   return (
     <div className="grid grid-rows-[auto_1fr_auto] min-h-screen bg-white text-black font-sans">
-    {/* Header */}
-    <header className="w-full bg-black text-white p-4 md:p-6 sticky top-0 z-50 shadow-lg">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="flex items-center gap-3 mb-4 md:mb-0">
-          <div className="font-bold text-2xl md:text-3xl">Kanye CSI</div>
-          <div className="text-sm md:text-base text-gray-300">Empowering through skills</div>
-        </div>
-        <nav>
-          <ul className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm md:text-base">
-            <li>
-              <button 
-                onClick={() => scrollToSection('programs')} 
-                className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-              >
-                Programs
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('services')} 
-                className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-              >
-                Services
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('about')} 
-                className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-              >
-                About
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('contact')} 
-                className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <SiteHeader
+      items={[
+        { label: "Programs", onClick: () => scrollToSection("programs") },
+        { label: "Services", onClick: () => scrollToSection("services") },
+        { label: "About", onClick: () => scrollToSection("about") },
+        { label: "Contact", onClick: () => scrollToSection("contact") },
+      ]}
+    />
 
       {/* Main content */}
-      <main className="flex flex-col gap-8 py-6 px-4 md:px-8">
+      <main className="flex flex-col gap-10 py-6 px-4 sm:px-6 md:px-8">
         {/* Hero Section */}
-        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center animate-fade-in">
-          <div className="flex flex-col gap-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+        <section className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8 items-center animate-fade-in">
+          <div className="flex flex-col gap-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">
               Transform Your Future with 
               <span className="text-[#cf4500]"> Learnerships</span> and 
               <span className="text-[#cf4500]"> Skills Development</span>
             </h1>
-            <p className="text-lg text-[#323231] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#323231] leading-relaxed">
               Practical, industry-recognized training programs to advance your career and improve your employability.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <div className="flex flex-col sm:flex-row gap-3 mt-2">
               <button 
                 onClick={() => scrollToSection('programs')}
-                className="px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="min-h-12 px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg"
               >
                 Explore Programs
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="px-6 py-3 border-2 border-[#323231] text-[#323231] rounded-lg hover:bg-[#323231] hover:text-white transition-all duration-300 font-medium"
+                className="min-h-12 px-6 py-3 border-2 border-[#323231] text-[#323231] rounded-lg hover:bg-[#323231] hover:text-white transition-all duration-300 font-medium"
               >
                 Contact Us
               </button>
             </div>
           </div>
-          <div className="relative h-64 md:h-80 rounded-lg overflow-hidden shadow-xl">
+          <div className="relative h-56 sm:h-72 md:h-80 rounded-lg overflow-hidden shadow-xl">
             <Image 
               src="/images/class2.png" 
               alt="Diverse group of students in a skills training classroom" 
@@ -172,9 +138,9 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2 text-[#323231]">Agricultural Skills</h3>
                 <p className="text-[#323231] mb-4 leading-relaxed">Learn sustainable farming practices, crop management, and modern agricultural techniques to boost productivity and food security.</p>
-                <button className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
+                <Link href="/agriculture" className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
                   Learn more →
-                </button>
+                </Link>
               </div>
             </div>
             
@@ -191,9 +157,9 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2 text-[#323231]">Construction</h3>
                 <p className="text-[#323231] mb-4 leading-relaxed">Comprehensive training in building techniques, safety protocols, and industry standards for the construction sector.</p>
-                <button className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
+                <Link href="/construction" className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
                   Learn more →
-                </button>
+                </Link>
               </div>
             </div>
             
@@ -210,9 +176,9 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2 text-[#323231]">Digital Literacy</h3>
                 <p className="text-[#323231] mb-4 leading-relaxed">Develop essential computer skills, from basic office applications to advanced digital tools needed in today&apos;s workplace.</p>
-                <button className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
+                <Link href="/digital-literacy" className="text-[#cf4500] font-medium hover:underline focus:outline-none focus:underline">
                   Learn more →
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -279,12 +245,12 @@ export default function Home() {
           </div>
           
           <div className="mt-8 text-center">
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <Link 
+              href="/programs"
               className="inline-block px-8 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Browse All Programs
-            </button>
+            </Link>
           </div>
         </section>
 
@@ -322,12 +288,12 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="max-w-6xl mx-auto w-full py-16 px-4 bg-gradient-to-br from-[#f8f8f8] to-white rounded-xl">
-          <h2 className="text-3xl font-bold text-black mb-6 text-center">About Kanye CSI</h2>
+          <h2 className="text-3xl font-bold text-black mb-6 text-center">About KanyaCSI</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <p className="text-[#323231] leading-relaxed">
-                <strong>KANYA CSI</strong> is a dynamic Business Development and skills development provider, founded by Michelle McMaster in 2010. It is 100% black-owned, 100% women owned and has a <span className="text-[#cf4500] font-semibold">BBBEE Level 1 status</span> as per revised Codes of Good Practice.
+                <strong>KanyaCSI</strong> is a dynamic Business Development and skills development provider, founded by Michelle McMaster in 2010. It is 100% black-owned, 100% women owned and has a <span className="text-[#cf4500] font-semibold">BBBEE Level 1 status</span> as per revised Codes of Good Practice.
               </p>
               
               <p className="text-[#323231] leading-relaxed">
@@ -339,9 +305,23 @@ export default function Home() {
               </p>
               
               <div className="bg-[#cf4500] bg-opacity-10 p-4 rounded-lg border-l-4 border-[#cf4500]">
-                <p className="text-[#323231] font-medium">
-                  We are accredited by the MICTSETA, Services SETA, Agri SETA and the South African Board of Peoples Practices &quot;SABPP&quot;.
+                <p className="text-[#323231] font-medium mb-4">
+                  We are accredited by the QCTO, MICT SETA, Services SETA, AgriSETA and the South African Board of Peoples Practices &quot;SABPP&quot;.
                 </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="bg-black rounded-md p-2">
+                    <Image src="/images/qcto.png" alt="QCTO logo" width={90} height={36} className="h-9 w-auto object-contain" />
+                  </div>
+                  <div className="bg-black rounded-md p-2">
+                    <Image src="/images/mictseta.png" alt="MICT SETA logo" width={36} height={36} className="h-9 w-9 object-contain" />
+                  </div>
+                  <div className="bg-black rounded-md p-2">
+                    <Image src="/images/servicesseta.png" alt="Services SETA logo" width={72} height={36} className="h-9 w-auto object-contain" />
+                  </div>
+                  <div className="bg-black rounded-md p-2">
+                    <Image src="/images/agriseta.png" alt="AgriSETA logo" width={60} height={36} className="h-9 w-auto object-contain" />
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -358,7 +338,7 @@ export default function Home() {
               
               <div className="bg-gradient-to-r from-[#cf4500] to-[#b03a00] p-4 rounded-lg text-white">
                 <p className="italic text-center font-medium">
-                  &quot;KANYA CSI believes that it has the vision, commitment and expertise to develop human potential and create a world that works better.&quot;
+                  &quot;KanyaCSI believes that it has the vision, commitment and expertise to develop human potential and create a world that works better.&quot;
                 </p>
               </div>
             </div>
@@ -369,46 +349,116 @@ export default function Home() {
         <section className="max-w-6xl mx-auto w-full py-12 px-4">
           <h2 className="text-3xl font-bold text-black mb-8 text-center">Success Stories</h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20">
-                  <Image 
-                    src="/images/computer.png" 
-                    alt="Student portrait" 
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
+          <div className="relative">
+            <div className="overflow-x-auto pb-6 flex gap-4 sm:gap-6 custom-scrollbar snap-x snap-mandatory">
+              {/* Esinako's Story */}
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;😭😭😭 I really don&apos;t know how I can begin to thank you Ma&apos;am 🙏 for being so patient with all of us, for not giving up on us, for being not just a mentor but our safe space, for always be our go to person when things are not going well in our workplaces 😭😭 I have never met anyone who did what you did for me 🤞 Thank you so much miss Michelle, I promise to make you more proud.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Esinako</p>
+                    <p className="text-sm text-[#323231]">Graduate</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="italic mb-3 text-[#323231] leading-relaxed">
-                    &quot;The agricultural training program at Kanye CSI gave me the skills and confidence to start my own small farm. Now I&apos;m employing three people from my community.&quot;
-                  </p>
-                  <p className="font-bold text-[#cf4500]">- Thabo M.</p>
-                  <p className="text-sm text-[#323231]">Agricultural Skills Graduate</p>
+              </div>
+
+              {/* Melsango's Story */}
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;My business has grown already and I am grateful to be part of this program because it&apos;s so helpful, I&apos;ve got new clients i handle my clients definitely and it will help for more growth in my business.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Melsango Gwaza</p>
+                    <p className="text-sm text-[#323231]">Business Owner</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Wendy's Story */}
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;The Learning Programme is very informative and helpful in running my business and has opened a new way of thinking. The programme will allow me to put all the processing in place, allowing my company to grow from strength to strength.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Wendy Kweyama</p>
+                    <p className="text-sm text-[#323231]">Entrepreneur</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Zukiswa's Story */}
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;What have you learned so far? The importance of leadership and understanding the type of entrepreneur that I am. Networking with fellow entrepreneurs.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Zukiswa Tonisi</p>
+                    <p className="text-sm text-[#323231]">Business Leader</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lulama's Story */}
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+                <div className="flex flex-col gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
+                    <Image 
+                      src="/images/profile-outline.png" 
+                      alt="Profile outline" 
+                      fill
+                      style={{ objectFit: 'contain', padding: '12px' }}
+                    />
+                  </div>
+                  <div>
+                    <p className="italic mb-3 text-[#323231] leading-relaxed">
+                      &quot;The learning intervention programme is to provide skills which can form the basis for structured programmes to us as potential entrepreneurs to capitalize on opportunities to start and grow sustainable businesses that form part of the mainstream economy. Where do you see yourself upon completion of this Learning Intervention? Being a successful entrepreneur who is strong enough to face business challenges internally and externally implementing what I have learned from the programme.&quot;
+                    </p>
+                    <p className="font-bold text-[#cf4500]">- Lulama Eunice Majivolo</p>
+                    <p className="text-sm text-[#323231]">Aspiring Entrepreneur</p>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20">
-                  <Image 
-                    src="/images/farm.png" 
-                    alt="Student portrait" 
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
-                <div>
-                  <p className="italic mb-3 text-[#323231] leading-relaxed">
-                    &quot;After completing the IT program, I secured a position at a software company. The practical training made all the difference in my job interviews.&quot;
-                  </p>
-                  <p className="font-bold text-[#cf4500]">- Lerato N.</p>
-                  <p className="text-sm text-[#323231]">Digital Literacy Graduate</p>
-                </div>
-              </div>
-            </div>
+            <div className="hidden sm:block absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
+            <div className="hidden sm:block absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
         </section>
 
@@ -478,7 +528,7 @@ export default function Home() {
                     required
                     value={contactForm.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
+                    className="w-full min-h-12 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -494,7 +544,7 @@ export default function Home() {
                     required
                     value={contactForm.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
+                    className="w-full min-h-12 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
                     placeholder="Enter your email address"
                   />
                 </div>
@@ -509,7 +559,7 @@ export default function Home() {
                     name="phone"
                     value={contactForm.phone}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
+                    className="w-full min-h-12 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -523,7 +573,7 @@ export default function Home() {
                     name="program"
                     value={contactForm.program}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
+                    className="w-full min-h-12 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
                   >
                     <option value="">Select a program</option>
                     <option value="agricultural">Agricultural Skills</option>
@@ -545,7 +595,7 @@ export default function Home() {
                     rows={4}
                     value={contactForm.message}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent resize-none"
+                    className="w-full min-h-28 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent resize-none"
                     placeholder="Tell us about your training needs or ask any questions"
                   ></textarea>
                 </div>
@@ -553,7 +603,7 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full min-h-12 px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
@@ -563,81 +613,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="w-full">
-        <div className="bg-[#323231] text-white py-2 px-4">
-          <div className="max-w-6xl mx-auto flex justify-between items-center flex-wrap">
-            <p className="text-sm text-gray-300">© {new Date().getFullYear()} Kanye CSI - All rights reserved</p>
-            <div className="flex gap-6 text-sm">
-              <button className="text-gray-300 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]">
-                Privacy Policy
-              </button>
-              <button className="text-gray-300 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]">
-                Terms of Service
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        <div className="bg-black text-white py-8 px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-[#cf4500]">Kanye CSI</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Providing quality skills training and development to empower individuals and organizations across South Africa.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-medium mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('programs')}
-                    className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]"
-                  >
-                    Programs
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('about')}
-                    className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]"
-                  >
-                    About Us
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('contact')}
-                    className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]"
-                  >
-                    Contact
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-medium mb-4">Connect With Us</h3>
-              <div className="flex gap-4">
-                <button className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500] w-8 h-8 rounded-full bg-gray-800 hover:bg-[#cf4500] flex items-center justify-center">
-                  FB
-                </button>
-                <button className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500] w-8 h-8 rounded-full bg-gray-800 hover:bg-[#cf4500] flex items-center justify-center">
-                  TW
-                </button>
-                <button className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500] w-8 h-8 rounded-full bg-gray-800 hover:bg-[#cf4500] flex items-center justify-center">
-                  IG
-                </button>
-                <button className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500] w-8 h-8 rounded-full bg-gray-800 hover:bg-[#cf4500] flex items-center justify-center">
-                  LI
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter onNavigate={scrollToSection} />
     </div>
   );
 }
