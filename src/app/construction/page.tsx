@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default function ConstructionPage() {
   const scrollToSection = (sectionId: string) => {
@@ -13,79 +15,50 @@ export default function ConstructionPage() {
 
   return (
     <div className="min-h-screen bg-white text-black font-sans">
-      {/* Header */}
-      <header className="w-full bg-black text-white p-4 md:p-6 sticky top-0 z-50 shadow-lg">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center gap-3 mb-4 md:mb-0">
-            <Link href="/" className="font-bold text-2xl md:text-3xl hover:text-[#cf4500] transition-colors">
-              KanyaCSI
-            </Link>
-            <div className="text-sm md:text-base text-gray-300">Construction Skills</div>
-          </div>
-          <nav>
-            <ul className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm md:text-base">
-              <li>
-                <Link href="/" className="hover:text-[#cf4500] transition-colors duration-300">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/agriculture" className="hover:text-[#cf4500] transition-colors duration-300">
-                  Agriculture
-                </Link>
-              </li>
-              <li>
-                <Link href="/digital-literacy" className="hover:text-[#cf4500] transition-colors duration-300">
-                  Digital Literacy
-                </Link>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('contact')} 
-                  className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-                >
-                  Contact
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader
+        tagline="Construction Skills"
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Agriculture", href: "/agriculture" },
+          { label: "Digital Literacy", href: "/digital-literacy" },
+          { label: "Contact", onClick: () => scrollToSection("contact") },
+        ]}
+      />
 
       {/* Main content */}
-      <main className="flex flex-col gap-8 py-6 px-4 md:px-8">
+      <main className="flex flex-col gap-10 py-6 px-4 sm:px-6 md:px-8">
         {/* Hero Section */}
-        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-3 mb-2">
-              <Link href="/" className="flex items-center gap-2 text-[#cf4500] hover:text-[#b03a00] transition-colors">
+        <section className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8 items-center">
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-3">
+              <Link href="/" className="flex min-h-11 items-center gap-2 text-[#cf4500] hover:text-[#b03a00] transition-colors">
                 <span className="text-xl">←</span>
                 <span className="font-medium">Back to Home</span>
               </Link>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">
               Construction Skills
               <span className="text-[#cf4500]"> Training Programs</span>
             </h1>
-            <p className="text-lg text-[#323231] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#323231] leading-relaxed">
               Professional construction training programs that prepare you for a successful career in the building industry with hands-on experience and industry-recognized certifications.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <div className="flex flex-col sm:flex-row gap-3 mt-2">
               <button 
                 onClick={() => scrollToSection('programs')}
-                className="px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="min-h-12 px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg"
               >
                 View Programs
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="px-6 py-3 border-2 border-[#323231] text-[#323231] rounded-lg hover:bg-[#323231] hover:text-white transition-all duration-300 font-medium"
+                className="min-h-12 px-6 py-3 border-2 border-[#323231] text-[#323231] rounded-lg hover:bg-[#323231] hover:text-white transition-all duration-300 font-medium"
               >
                 Apply Now
               </button>
             </div>
           </div>
-          <div className="relative h-64 md:h-80 rounded-lg overflow-hidden shadow-xl">
+          <div className="relative h-56 sm:h-72 md:h-80 rounded-lg overflow-hidden shadow-xl">
             <Image 
               src="/images/construction.png" 
               alt="Construction training with students learning building skills" 
@@ -98,7 +71,7 @@ export default function ConstructionPage() {
         </section>
 
         {/* Programs Section */}
-        <section className="max-w-6xl mx-auto w-full py-12">
+        <section id="programs" className="max-w-6xl mx-auto w-full py-10 sm:py-12">
           <h2 className="text-3xl font-bold text-black mb-8 text-center">Our Construction Programs</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -233,6 +206,35 @@ export default function ConstructionPage() {
                 </div>
               </div>
             </div>
+
+            {/* Intermediate Emergency First Aid */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
+              <div className="bg-black px-4 py-3 flex items-center gap-3">
+                <Image src="/images/qcto.png" alt="QCTO logo" width={110} height={40} className="h-10 w-auto object-contain" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-wide text-[#cf4500] font-semibold mb-2">Qualification / Programme Title</p>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Occupational Skill Programme: Intermediate Emergency First Aid</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">Accredited with QCTO | Programme ID: SP-230802 | NQF Level 03</p>
+                <ul className="text-[#323231] mb-4 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>5 credits of occupational skills training</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Respond to workplace and community medical emergencies</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Stabilise casualties until advanced medical help arrives</span>
+                  </li>
+                </ul>
+                <div className="text-sm text-[#cf4500] font-medium">
+                  QCTO Accredited
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -328,19 +330,7 @@ export default function ConstructionPage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="w-full bg-[#323231] text-white py-8">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <Link href="/" className="text-xl font-bold text-[#cf4500] hover:text-white transition-colors">
-              KanyaCSI
-            </Link>
-            <p className="text-sm text-gray-400 mt-2">
-              © {new Date().getFullYear()} KanyaCSI - All rights reserved
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 } 
