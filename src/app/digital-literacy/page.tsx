@@ -101,7 +101,7 @@ export default function DigitalLiteracyPage() {
         <section id="programs" className="max-w-6xl mx-auto w-full py-12 bg-[#f8f8f8] rounded-xl">
           <h2 className="text-3xl font-bold text-black mb-8 px-4 text-center">Information Technology Training Programs</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
             {/* Information Technology: End User Computing */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
               <div className="p-6">
@@ -197,6 +197,66 @@ export default function DigitalLiteracyPage() {
                 </ul>
                 <div className="text-sm text-[#cf4500] font-medium">
                   NQF Level 4
+                </div>
+              </div>
+            </div>
+
+            {/* Computer Technician */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
+              <div className="bg-black px-4 py-3 flex items-center gap-3">
+                <Image src="/images/qcto.png" alt="QCTO logo" width={110} height={40} className="h-10 w-auto object-contain" />
+                <Image src="/images/mictseta.png" alt="MICT SETA logo" width={40} height={40} className="h-10 w-10 object-contain" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-wide text-[#cf4500] font-semibold mb-2">Qualification / Programme Title</p>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Occupational Certificate: Computer Technician</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">Accredited with QCTO | SAQA ID: 101408 | NQF Level 5</p>
+                <ul className="text-[#323231] mb-4 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>282 credits of occupational training</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Install, maintain and repair computer hardware</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Software, network and ICT support skills</span>
+                  </li>
+                </ul>
+                <div className="text-sm text-[#cf4500] font-medium">
+                  QCTO &amp; MICT SETA
+                </div>
+              </div>
+            </div>
+
+            {/* Software Developer */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
+              <div className="bg-black px-4 py-3 flex items-center gap-3">
+                <Image src="/images/qcto.png" alt="QCTO logo" width={110} height={40} className="h-10 w-auto object-contain" />
+                <Image src="/images/mictseta.png" alt="MICT SETA logo" width={40} height={40} className="h-10 w-10 object-contain" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-wide text-[#cf4500] font-semibold mb-2">Qualification / Programme Title</p>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Occupational Certificate: Software Developer</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">Accredited with QCTO | SAQA ID: 118707 | NQF Level 5</p>
+                <ul className="text-[#323231] mb-4 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>220 credits of occupational training</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Design, build and maintain software applications</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Web, application and programming practices</span>
+                  </li>
+                </ul>
+                <div className="text-sm text-[#cf4500] font-medium">
+                  QCTO &amp; MICT SETA
                 </div>
               </div>
             </div>

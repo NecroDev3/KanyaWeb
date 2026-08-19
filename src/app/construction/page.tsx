@@ -233,6 +233,35 @@ export default function ConstructionPage() {
                 </div>
               </div>
             </div>
+
+            {/* Intermediate Emergency First Aid */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
+              <div className="bg-black px-4 py-3 flex items-center gap-3">
+                <Image src="/images/qcto.png" alt="QCTO logo" width={110} height={40} className="h-10 w-auto object-contain" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-wide text-[#cf4500] font-semibold mb-2">Qualification / Programme Title</p>
+                <h3 className="font-bold text-xl mb-3 text-[#323231]">Occupational Skill Programme: Intermediate Emergency First Aid</h3>
+                <p className="text-sm text-[#cf4500] font-semibold mb-3">Accredited with QCTO | Programme ID: SP-230802 | NQF Level 03</p>
+                <ul className="text-[#323231] mb-4 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>5 credits of occupational skills training</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Respond to workplace and community medical emergencies</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">✓</span>
+                    <span>Stabilise casualties until advanced medical help arrives</span>
+                  </li>
+                </ul>
+                <div className="text-sm text-[#cf4500] font-medium">
+                  QCTO Accredited
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

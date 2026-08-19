@@ -340,9 +340,23 @@ export default function Home() {
               </p>
               
               <div className="bg-[#cf4500] bg-opacity-10 p-4 rounded-lg border-l-4 border-[#cf4500]">
-                <p className="text-[#323231] font-medium">
-                  We are accredited by the MICTSETA, Services SETA, Agri SETA and the South African Board of Peoples Practices &quot;SABPP&quot;.
+                <p className="text-[#323231] font-medium mb-4">
+                  We are accredited by the QCTO, MICT SETA, Services SETA, AgriSETA and the South African Board of Peoples Practices &quot;SABPP&quot;.
                 </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="bg-black rounded-md p-2">
+                    <Image src="/images/qcto.png" alt="QCTO logo" width={90} height={36} className="h-9 w-auto object-contain" />
+                  </div>
+                  <div className="bg-black rounded-md p-2">
+                    <Image src="/images/mictseta.png" alt="MICT SETA logo" width={36} height={36} className="h-9 w-9 object-contain" />
+                  </div>
+                  <div className="bg-black rounded-md p-2">
+                    <Image src="/images/servicesseta.png" alt="Services SETA logo" width={72} height={36} className="h-9 w-auto object-contain" />
+                  </div>
+                  <div className="bg-black rounded-md p-2">
+                    <Image src="/images/agriseta.png" alt="AgriSETA logo" width={60} height={36} className="h-9 w-auto object-contain" />
+                  </div>
+                </div>
               </div>
             </div>
             

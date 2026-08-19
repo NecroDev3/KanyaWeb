@@ -358,66 +358,158 @@ export default function ProgramsPage() {
 
         {/* Accreditations Section */}
         <section id="accreditations" className="max-w-6xl mx-auto w-full py-12 bg-[#f8f8f8] rounded-xl">
-          <h2 className="text-3xl font-bold text-black mb-8 px-4 text-center">Our Accreditations</h2>
-          
+          <h2 className="text-3xl font-bold text-black mb-3 px-4 text-center">Our Accreditations</h2>
+          <p className="text-center text-[#323231] mb-10 px-4 max-w-3xl mx-auto">
+            Accredited with QCTO occupational qualifications and skills programmes, supported by our SETA accreditations.
+          </p>
+
+          <h3 className="text-2xl font-bold text-black mb-6 px-4 text-center">QCTO Qualifications &amp; Skills Programmes</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-12">
+            {/* First Aid */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
+              <div className="bg-black px-6 py-4 flex items-center justify-center gap-4">
+                <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-wide text-[#cf4500] font-semibold mb-2">Qualification / Programme Title</p>
+                <h4 className="text-lg font-bold text-[#323231] mb-4 leading-snug">
+                  Occupational Skill Programme: Intermediate Emergency First Aid
+                </h4>
+                <div className="bg-[#f8f8f8] rounded-lg p-4 space-y-2 text-sm text-[#323231]">
+                  <p><span className="font-semibold">Accredited with:</span> QCTO</p>
+                  <p><span className="font-semibold">NQF Level:</span> 03</p>
+                  <p><span className="font-semibold">Programme ID:</span> SP-230802</p>
+                  <p><span className="font-semibold">Credits:</span> 5</p>
+                  <p><span className="font-semibold">Details:</span> Intermediate emergency first aid responder skills for workplace and community incidents.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Computer Technician */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
+              <div className="bg-black px-6 py-4 flex items-center justify-center gap-4">
+                <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
+                <Image src="/images/mictseta.png" alt="MICT SETA logo" width={56} height={56} className="h-14 w-14 object-contain" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-wide text-[#cf4500] font-semibold mb-2">Qualification / Programme Title</p>
+                <h4 className="text-lg font-bold text-[#323231] mb-4 leading-snug">
+                  Occupational Certificate: Computer Technician
+                </h4>
+                <div className="bg-[#f8f8f8] rounded-lg p-4 space-y-2 text-sm text-[#323231]">
+                  <p><span className="font-semibold">Accredited with:</span> QCTO (MICT SETA)</p>
+                  <p><span className="font-semibold">NQF Level:</span> 5</p>
+                  <p><span className="font-semibold">SAQA ID:</span> 101408</p>
+                  <p><span className="font-semibold">Credits:</span> 282</p>
+                  <p><span className="font-semibold">Details:</span> Install, maintain and repair computer hardware, software and networks for ICT support roles.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Software Developer */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
+              <div className="bg-black px-6 py-4 flex items-center justify-center gap-4">
+                <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
+                <Image src="/images/mictseta.png" alt="MICT SETA logo" width={56} height={56} className="h-14 w-14 object-contain" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-wide text-[#cf4500] font-semibold mb-2">Qualification / Programme Title</p>
+                <h4 className="text-lg font-bold text-[#323231] mb-4 leading-snug">
+                  Occupational Certificate: Software Developer
+                </h4>
+                <div className="bg-[#f8f8f8] rounded-lg p-4 space-y-2 text-sm text-[#323231]">
+                  <p><span className="font-semibold">Accredited with:</span> QCTO (MICT SETA)</p>
+                  <p><span className="font-semibold">NQF Level:</span> 5</p>
+                  <p><span className="font-semibold">SAQA ID:</span> 118707</p>
+                  <p><span className="font-semibold">Credits:</span> 220</p>
+                  <p><span className="font-semibold">Details:</span> Design, build and maintain software applications using industry development practices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-bold text-black mb-6 px-4 text-center">SETA Accreditations</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
             {/* MICTSETA */}
-            <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#cf4500]">
-              <h3 className="text-xl font-bold text-[#cf4500] mb-4">MICTSETA</h3>
-              <p className="text-sm text-[#323231] mb-3">Accreditation: ACC/2018/01/0005</p>
-              <ul className="space-y-2 text-[#323231] text-sm">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>National Certificate: IT End User Level 3 (ID: 49077)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>FET Certificate: IT Technical Support Level 4 (ID: 78964)</span>
-                </li>
-              </ul>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
+              <div className="bg-black px-6 py-4 flex items-center justify-center">
+                <Image src="/images/mictseta.png" alt="MICT SETA logo" width={80} height={80} className="h-20 w-20 object-contain" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#cf4500] mb-2">MICT SETA</h3>
+                <p className="text-sm text-[#323231] mb-3">Accreditation: ACC/2018/01/0005</p>
+                <ul className="space-y-2 text-[#323231] text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>National Certificate: IT End User Level 3 (ID: 49077)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>FET Certificate: IT Technical Support Level 4 (ID: 78964)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>Occupational Certificate: Computer Technician NQF Level 5 (SAQA ID: 101408)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>Occupational Certificate: Software Developer NQF Level 5 (SAQA ID: 118707)</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             {/* Services SETA */}
-            <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#cf4500]">
-              <h3 className="text-xl font-bold text-[#cf4500] mb-4">Services SETA</h3>
-              <p className="text-sm text-[#323231] mb-3">Accreditation: 13473</p>
-              <ul className="space-y-2 text-[#323231] text-sm">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>New Venture SMME Creation Level 2 (ID: 49648)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>New Venture Creation Level 4 (ID: 66249)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>Business Administration Services Level 4 (ID: 61595)</span>
-                </li>
-              </ul>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
+              <div className="bg-black px-6 py-4 flex items-center justify-center">
+                <Image src="/images/servicesseta.png" alt="Services SETA logo" width={120} height={80} className="h-20 w-auto object-contain" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#cf4500] mb-2">Services SETA</h3>
+                <p className="text-sm text-[#323231] mb-3">Accreditation: 13473</p>
+                <ul className="space-y-2 text-[#323231] text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>New Venture SMME Creation Level 2 (ID: 49648)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>New Venture Creation Level 4 (ID: 66249)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>Business Administration Services Level 4 (ID: 61595)</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            {/* AGRISETA & Others */}
-            <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#cf4500]">
-              <h3 className="text-xl font-bold text-[#cf4500] mb-4">AGRISETA & Others</h3>
-              <ul className="space-y-2 text-[#323231] text-sm">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>Mixed Farming (ID: 48977)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>Animal Production (ID: 48970)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>Poultry (ID: 49582)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#cf4500] font-bold">•</span>
-                  <span>SABPP: Life Skills Coaching Practitioner</span>
-                </li>
-              </ul>
+            {/* AGRISETA */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
+              <div className="bg-black px-6 py-4 flex items-center justify-center">
+                <Image src="/images/agriseta.png" alt="AgriSETA logo" width={100} height={80} className="h-20 w-auto object-contain" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#cf4500] mb-2">AgriSETA &amp; Others</h3>
+                <ul className="space-y-2 text-[#323231] text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>Mixed Farming (ID: 48977)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>Animal Production (ID: 48970)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>Poultry (ID: 49582)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#cf4500] font-bold">•</span>
+                    <span>SABPP: Life Skills Coaching Practitioner</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
