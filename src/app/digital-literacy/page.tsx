@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default function DigitalLiteracyPage() {
   const scrollToSection = (sectionId: string) => {
@@ -13,57 +15,28 @@ export default function DigitalLiteracyPage() {
 
   return (
     <div className="min-h-screen bg-white text-black font-sans">
-      {/* Header */}
-      <header className="w-full bg-black text-white p-4 md:p-6 sticky top-0 z-50 shadow-lg">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center gap-3 mb-4 md:mb-0">
-            <Link href="/" className="font-bold text-2xl md:text-3xl hover:text-[#cf4500] transition-colors">
-              KanyaCSI
-            </Link>
-            <div className="text-sm md:text-base text-gray-300">Digital Literacy</div>
-          </div>
-          <nav>
-            <ul className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm md:text-base">
-              <li>
-                <Link href="/" className="hover:text-[#cf4500] transition-colors duration-300">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/agriculture" className="hover:text-[#cf4500] transition-colors duration-300">
-                  Agriculture
-                </Link>
-              </li>
-              <li>
-                <Link href="/construction" className="hover:text-[#cf4500] transition-colors duration-300">
-                  Construction
-                </Link>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('contact')} 
-                  className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-                >
-                  Contact
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader
+        tagline="Digital Literacy"
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Agriculture", href: "/agriculture" },
+          { label: "Construction", href: "/construction" },
+          { label: "Contact", onClick: () => scrollToSection("contact") },
+        ]}
+      />
 
       {/* Main content */}
-      <main className="flex flex-col gap-8 py-6 px-4 md:px-8">
+      <main className="flex flex-col gap-10 py-6 px-4 sm:px-6 md:px-8">
         {/* Hero Section */}
-        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-3 mb-2">
-              <Link href="/" className="flex items-center gap-2 text-[#cf4500] hover:text-[#b03a00] transition-colors">
+        <section className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8 items-center">
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-3">
+              <Link href="/" className="flex min-h-11 items-center gap-2 text-[#cf4500] hover:text-[#b03a00] transition-colors">
                 <span className="text-xl">←</span>
                 <span className="font-medium">Back to Home</span>
               </Link>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">
               Digital Literacy
               <span className="text-[#cf4500]"> Training Programs</span>
             </h1>
@@ -396,19 +369,7 @@ export default function DigitalLiteracyPage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="w-full bg-[#323231] text-white py-8">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <Link href="/" className="text-xl font-bold text-[#cf4500] hover:text-white transition-colors">
-              KanyaCSI
-            </Link>
-            <p className="text-sm text-gray-400 mt-2">
-              © {new Date().getFullYear()} KanyaCSI - All rights reserved
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 } 

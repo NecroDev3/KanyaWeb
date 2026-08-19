@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default function Home() {
   const [contactForm, setContactForm] = useState({
@@ -66,81 +68,44 @@ export default function Home() {
 
   return (
     <div className="grid grid-rows-[auto_1fr_auto] min-h-screen bg-white text-black font-sans">
-    {/* Header */}
-    <header className="w-full bg-black text-white p-4 md:p-6 sticky top-0 z-50 shadow-lg">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="flex items-center gap-3 mb-4 md:mb-0">
-          <div className="font-bold text-2xl md:text-3xl">KanyaCSI</div>
-          <div className="text-sm md:text-base text-gray-300">Empowering through skills</div>
-        </div>
-        <nav>
-          <ul className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm md:text-base">
-            <li>
-              <button 
-                onClick={() => scrollToSection('programs')} 
-                className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-              >
-                Programs
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('services')} 
-                className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-              >
-                Services
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('about')} 
-                className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-              >
-                About
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('contact')} 
-                className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <SiteHeader
+      items={[
+        { label: "Programs", onClick: () => scrollToSection("programs") },
+        { label: "Services", onClick: () => scrollToSection("services") },
+        { label: "About", onClick: () => scrollToSection("about") },
+        { label: "Contact", onClick: () => scrollToSection("contact") },
+      ]}
+    />
 
       {/* Main content */}
-      <main className="flex flex-col gap-8 py-6 px-4 md:px-8">
+      <main className="flex flex-col gap-10 py-6 px-4 sm:px-6 md:px-8">
         {/* Hero Section */}
-        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center animate-fade-in">
-          <div className="flex flex-col gap-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+        <section className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8 items-center animate-fade-in">
+          <div className="flex flex-col gap-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">
               Transform Your Future with 
               <span className="text-[#cf4500]"> Learnerships</span> and 
               <span className="text-[#cf4500]"> Skills Development</span>
             </h1>
-            <p className="text-lg text-[#323231] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#323231] leading-relaxed">
               Practical, industry-recognized training programs to advance your career and improve your employability.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <div className="flex flex-col sm:flex-row gap-3 mt-2">
               <button 
                 onClick={() => scrollToSection('programs')}
-                className="px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="min-h-12 px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg"
               >
                 Explore Programs
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="px-6 py-3 border-2 border-[#323231] text-[#323231] rounded-lg hover:bg-[#323231] hover:text-white transition-all duration-300 font-medium"
+                className="min-h-12 px-6 py-3 border-2 border-[#323231] text-[#323231] rounded-lg hover:bg-[#323231] hover:text-white transition-all duration-300 font-medium"
               >
                 Contact Us
               </button>
             </div>
           </div>
-          <div className="relative h-64 md:h-80 rounded-lg overflow-hidden shadow-xl">
+          <div className="relative h-56 sm:h-72 md:h-80 rounded-lg overflow-hidden shadow-xl">
             <Image 
               src="/images/class2.png" 
               alt="Diverse group of students in a skills training classroom" 
@@ -385,9 +350,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-black mb-8 text-center">Success Stories</h2>
           
           <div className="relative">
-            <div className="overflow-x-auto pb-6 flex gap-6 custom-scrollbar">
+            <div className="overflow-x-auto pb-6 flex gap-4 sm:gap-6 custom-scrollbar snap-x snap-mandatory">
               {/* Esinako's Story */}
-              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
                 <div className="flex flex-col gap-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
                     <Image 
@@ -408,7 +373,7 @@ export default function Home() {
               </div>
 
               {/* Melsango's Story */}
-              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
                 <div className="flex flex-col gap-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
                     <Image 
@@ -429,7 +394,7 @@ export default function Home() {
               </div>
 
               {/* Wendy's Story */}
-              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
                 <div className="flex flex-col gap-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
                     <Image 
@@ -450,7 +415,7 @@ export default function Home() {
               </div>
 
               {/* Zukiswa's Story */}
-              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
                 <div className="flex flex-col gap-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
                     <Image 
@@ -471,7 +436,7 @@ export default function Home() {
               </div>
 
               {/* Lulama's Story */}
-              <div className="flex-none w-[400px] bg-gradient-to-br from-[#f8f8f8] to-white p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
+              <div className="flex-none w-[min(100%,22rem)] sm:w-[400px] snap-start bg-gradient-to-br from-[#f8f8f8] to-white p-5 sm:p-6 rounded-lg shadow-lg border-l-4 border-[#cf4500]">
                 <div className="flex flex-col gap-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden relative flex-shrink-0 ring-4 ring-[#cf4500] ring-opacity-20 mx-auto bg-white">
                     <Image 
@@ -492,28 +457,10 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Scroll Indicators */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+            <div className="hidden sm:block absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
+            <div className="hidden sm:block absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
         </section>
-
-        <style jsx global>{`
-          .custom-scrollbar::-webkit-scrollbar {
-            height: 8px;
-          }
-          .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 4px;
-          }
-          .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cf4500;
-            border-radius: 4px;
-          }
-          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #b03a00;
-          }
-        `}</style>
 
         {/* Registration CTA */}
         <section className="w-full bg-gradient-to-r from-[#323231] to-black py-16 relative overflow-hidden rounded-xl">
@@ -581,7 +528,7 @@ export default function Home() {
                     required
                     value={contactForm.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
+                    className="w-full min-h-12 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -597,7 +544,7 @@ export default function Home() {
                     required
                     value={contactForm.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
+                    className="w-full min-h-12 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
                     placeholder="Enter your email address"
                   />
                 </div>
@@ -612,7 +559,7 @@ export default function Home() {
                     name="phone"
                     value={contactForm.phone}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
+                    className="w-full min-h-12 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -626,7 +573,7 @@ export default function Home() {
                     name="program"
                     value={contactForm.program}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
+                    className="w-full min-h-12 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent"
                   >
                     <option value="">Select a program</option>
                     <option value="agricultural">Agricultural Skills</option>
@@ -648,7 +595,7 @@ export default function Home() {
                     rows={4}
                     value={contactForm.message}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent resize-none"
+                    className="w-full min-h-28 px-3 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#cf4500] focus:border-transparent resize-none"
                     placeholder="Tell us about your training needs or ask any questions"
                   ></textarea>
                 </div>
@@ -656,7 +603,7 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full min-h-12 px-6 py-3 bg-[#cf4500] text-white rounded-lg hover:bg-[#b03a00] transition-all duration-300 font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
@@ -666,81 +613,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="w-full">
-        <div className="bg-[#323231] text-white py-2 px-4">
-          <div className="max-w-6xl mx-auto flex justify-between items-center flex-wrap">
-            <p className="text-sm text-gray-300">© {new Date().getFullYear()} KanyaCSI - All rights reserved</p>
-            <div className="flex gap-6 text-sm">
-              <button className="text-gray-300 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]">
-                Privacy Policy
-              </button>
-              <button className="text-gray-300 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]">
-                Terms of Service
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        <div className="bg-black text-white py-8 px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-[#cf4500]">KanyaCSI</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Providing quality skills training and development to empower individuals and organizations across South Africa.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-medium mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('programs')}
-                    className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]"
-                  >
-                    Programs
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('about')}
-                    className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]"
-                  >
-                    About Us
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('contact')}
-                    className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500]"
-                  >
-                    Contact
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-medium mb-4">Connect With Us</h3>
-              <div className="flex gap-4">
-                <button className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500] w-8 h-8 rounded-full bg-gray-800 hover:bg-[#cf4500] flex items-center justify-center">
-                  FB
-                </button>
-                <button className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500] w-8 h-8 rounded-full bg-gray-800 hover:bg-[#cf4500] flex items-center justify-center">
-                  TW
-                </button>
-                <button className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500] w-8 h-8 rounded-full bg-gray-800 hover:bg-[#cf4500] flex items-center justify-center">
-                  IG
-                </button>
-                <button className="text-gray-400 hover:text-[#cf4500] transition-colors focus:outline-none focus:text-[#cf4500] w-8 h-8 rounded-full bg-gray-800 hover:bg-[#cf4500] flex items-center justify-center">
-                  LI
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter onNavigate={scrollToSection} />
     </div>
   );
 }

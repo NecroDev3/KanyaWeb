@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default function ProgramsPage() {
   const scrollToSection = (sectionId: string) => {
@@ -13,53 +15,18 @@ export default function ProgramsPage() {
 
   return (
     <div className="min-h-screen bg-white text-black font-sans">
-      {/* Header */}
-      <header className="w-full bg-black text-white p-4 md:p-6 sticky top-0 z-50 shadow-lg">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center gap-3 mb-4 md:mb-0">
-            <Link href="/" className="font-bold text-2xl md:text-3xl hover:text-[#cf4500] transition-colors">
-              KanyaCSI
-            </Link>
-            <div className="text-sm md:text-base text-gray-300">All Programs</div>
-          </div>
-          <nav>
-            <ul className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm md:text-base">
-              <li>
-                <Link href="/" className="hover:text-[#cf4500] transition-colors duration-300">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('current-programs')} 
-                  className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-                >
-                  Current Programs
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('past-programs')} 
-                  className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-                >
-                  Past Programs
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('accreditations')} 
-                  className="hover:text-[#cf4500] transition-colors duration-300 focus:outline-none focus:text-[#cf4500]"
-                >
-                  Accreditations
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader
+        tagline="All Programs"
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Current Programs", onClick: () => scrollToSection("current-programs") },
+          { label: "Past Programs", onClick: () => scrollToSection("past-programs") },
+          { label: "Accreditations", onClick: () => scrollToSection("accreditations") },
+        ]}
+      />
 
       {/* Main content */}
-      <main className="flex flex-col gap-8 py-6 px-4 md:px-8">
+      <main className="flex flex-col gap-10 py-6 px-4 sm:px-6 md:px-8">
         {/* Hero Section */}
         <section className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
@@ -70,7 +37,7 @@ export default function ProgramsPage() {
           </div>
           
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight mb-6">
               All Training
               <span className="text-[#cf4500]"> Programs</span>
             </h1>
@@ -367,7 +334,7 @@ export default function ProgramsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-12">
             {/* First Aid */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-6 py-4 flex items-center justify-center gap-4">
+              <div className="bg-black px-4 py-4 flex flex-wrap items-center justify-center gap-4">
                 <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
               </div>
               <div className="p-6">
@@ -387,7 +354,7 @@ export default function ProgramsPage() {
 
             {/* Computer Technician */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-6 py-4 flex items-center justify-center gap-4">
+              <div className="bg-black px-4 py-4 flex flex-wrap items-center justify-center gap-4">
                 <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
                 <Image src="/images/mictseta.png" alt="MICT SETA logo" width={56} height={56} className="h-14 w-14 object-contain" />
               </div>
@@ -408,7 +375,7 @@ export default function ProgramsPage() {
 
             {/* Software Developer */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-6 py-4 flex items-center justify-center gap-4">
+              <div className="bg-black px-4 py-4 flex flex-wrap items-center justify-center gap-4">
                 <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
                 <Image src="/images/mictseta.png" alt="MICT SETA logo" width={56} height={56} className="h-14 w-14 object-contain" />
               </div>
@@ -539,19 +506,7 @@ export default function ProgramsPage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="w-full bg-[#323231] text-white py-8">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <Link href="/" className="text-xl font-bold text-[#cf4500] hover:text-white transition-colors">
-              KanyaCSI
-            </Link>
-            <p className="text-sm text-gray-400 mt-2">
-              © {new Date().getFullYear()} KanyaCSI - All rights reserved
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 } 
