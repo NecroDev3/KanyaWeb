@@ -334,7 +334,7 @@ export default function ProgramsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-12">
             {/* First Aid */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-4 py-4 flex flex-wrap items-center justify-center gap-4">
+              <div className="bg-white px-4 py-4 flex flex-wrap items-center justify-center gap-4 border-b border-gray-200">
                 <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
               </div>
               <div className="p-6">
@@ -354,7 +354,7 @@ export default function ProgramsPage() {
 
             {/* Computer Technician */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-4 py-4 flex flex-wrap items-center justify-center gap-4">
+              <div className="bg-white px-4 py-4 flex flex-wrap items-center justify-center gap-4 border-b border-gray-200">
                 <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
                 <Image src="/images/mictseta.png" alt="MICT SETA logo" width={56} height={56} className="h-14 w-14 object-contain" />
               </div>
@@ -375,7 +375,7 @@ export default function ProgramsPage() {
 
             {/* Software Developer */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-4 py-4 flex flex-wrap items-center justify-center gap-4">
+              <div className="bg-white px-4 py-4 flex flex-wrap items-center justify-center gap-4 border-b border-gray-200">
                 <Image src="/images/qcto.png" alt="QCTO logo" width={140} height={56} className="h-14 w-auto object-contain" />
                 <Image src="/images/mictseta.png" alt="MICT SETA logo" width={56} height={56} className="h-14 w-14 object-contain" />
               </div>
@@ -399,7 +399,7 @@ export default function ProgramsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
             {/* MICTSETA */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-6 py-4 flex items-center justify-center">
+              <div className="bg-white px-6 py-4 flex items-center justify-center border-b border-gray-200">
                 <Image src="/images/mictseta.png" alt="MICT SETA logo" width={80} height={80} className="h-20 w-20 object-contain" />
               </div>
               <div className="p-6">
@@ -428,7 +428,7 @@ export default function ProgramsPage() {
 
             {/* Services SETA */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-6 py-4 flex items-center justify-center">
+              <div className="bg-white px-6 py-4 flex items-center justify-center border-b border-gray-200">
                 <Image src="/images/servicesseta.png" alt="Services SETA logo" width={120} height={80} className="h-20 w-auto object-contain" />
               </div>
               <div className="p-6">
@@ -453,7 +453,7 @@ export default function ProgramsPage() {
 
             {/* AGRISETA */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#cf4500]">
-              <div className="bg-black px-6 py-4 flex items-center justify-center">
+              <div className="bg-white px-6 py-4 flex items-center justify-center border-b border-gray-200">
                 <Image src="/images/agriseta.png" alt="AgriSETA logo" width={100} height={80} className="h-20 w-auto object-contain" />
               </div>
               <div className="p-6">
