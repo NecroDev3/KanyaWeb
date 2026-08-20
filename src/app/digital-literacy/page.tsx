@@ -176,7 +176,7 @@ export default function DigitalLiteracyPage() {
 
             {/* Computer Technician */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="bg-black px-4 py-3 flex items-center gap-3">
+              <div className="bg-white px-4 py-3 flex items-center gap-3 border-b border-gray-200">
                 <Image src="/images/qcto.png" alt="QCTO logo" width={110} height={40} className="h-10 w-auto object-contain" />
                 <Image src="/images/mictseta.png" alt="MICT SETA logo" width={40} height={40} className="h-10 w-10 object-contain" />
               </div>
@@ -206,7 +206,7 @@ export default function DigitalLiteracyPage() {
 
             {/* Software Developer */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#cf4500]">
-              <div className="bg-black px-4 py-3 flex items-center gap-3">
+              <div className="bg-white px-4 py-3 flex items-center gap-3 border-b border-gray-200">
                 <Image src="/images/qcto.png" alt="QCTO logo" width={110} height={40} className="h-10 w-auto object-contain" />
                 <Image src="/images/mictseta.png" alt="MICT SETA logo" width={40} height={40} className="h-10 w-10 object-contain" />
               </div>
